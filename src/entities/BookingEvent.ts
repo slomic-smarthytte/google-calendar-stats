@@ -61,7 +61,6 @@ export class BookingEvent {
     const dates: DateDimension[] = [];
 
     for (let daysToAdd = 0; daysToAdd < this.occupancy; daysToAdd++) {
-
       const data: Partial<DateDimension> = {
         dateTime: addDays(this.startDate.date, daysToAdd),
         setTimeToStartOfDay: false,

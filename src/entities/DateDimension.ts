@@ -14,7 +14,8 @@ export class DateDimension {
   @Field({description: 'The original date with time, example 2020-09-24T18:00:00.000Z.'})
     dateTime: Date;
 
-  @Field({description: 'Date with time either at start or end of the day, example 2020-09-23T22:00:00.000Z.'})
+  @Field({description: 'Date with time either at start or end of the day, ' +
+        'example 2020-09-23T22:00:00.000Z.'})
   get date(): Date {
     if (this.setTimeToStartOfDay) {
       return startOfDay(this.dateTime);
